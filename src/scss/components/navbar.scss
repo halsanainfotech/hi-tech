@@ -105,7 +105,9 @@ header {
 
     @include breakpoint("small"){
         position: static;
-        height: auto;
+        // height: auto;
+        margin: auto 0;
+        padding: 1.2em 0;
         width: 50%;
         display: flex;
         flex-direction: row;
