@@ -1,0 +1,50 @@
+{
+    "details": {
+        "hero": {
+         "title": "We Empower Businesses With Automated Solution",
+         "img_url": "/assets/hi_img/digital_marketing.png"
+        },
+        "about": {
+            "title": "Who We Are",
+            "img_url": "/assets/hi_img/about_img.png",
+            "dis": "Treacy & Company’s consultants draw upon years of direct, front-line experience in a range of B2B and B2C settings from consumer products and financial services to healthcare, life sciences, industrials, and building products.",
+            "btn": "Learn More"
+        },
+        "studios": {
+            "title": "Strategy",
+            "img_url": "/assets/hi_img/strategy.png",
+            "strategy_list": [
+                "Quality Product on Time",
+                "24*7 Support",
+                "Industry Experts",
+                "Machine Learning Expertise",
+                "Trend Spotting ioT Services",
+                "Market Forecasting on the Future of AI",
+                "Optimize Resource Usage & Efficiency",
+                "Harness the Power of BigData"
+            ]
+        },
+        "speciality": {
+            "title": "Speciality",
+            "img_url": "/assets/hi_img/speciality.png",
+            "speciality_list": [
+                "Python",
+                "React.js",
+                "Node.js",
+                "jQuery",
+                "Dynamic 365",
+                "MongoDB",
+                "Express.js",
+                "Automation",
+                "UX Design",
+                "Big Data",
+                "IoT",
+                "Digital Content"
+            ]
+        },
+        "contact": {
+            "title": "Got a Problem to Slove?",
+            "img_url": "/assets/hi_img/contact-img.png"
+        }
+    }
+}

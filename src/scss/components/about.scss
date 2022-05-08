@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+.about {
+    &__title {
+        img {
+            top: -1em;
+            left: 6.1em;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .banner {
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #5FA1A7;
+            width: max-content;
+            margin: 0 auto;
+        }
+    }
+
+
+    @include breakpoint("small") {
+        .banner{
+            grid-auto-flow: dense;
+            .banner__img{
+                grid-column: 2;
+            }
+            .banner__content {
+                grid-column: 1;
+                margin: 0;
+                margin-left: 3em;
+            }
+            h1 {
+                width: max-content;
+                margin: 0;
+            }
+        }
+    }
+}

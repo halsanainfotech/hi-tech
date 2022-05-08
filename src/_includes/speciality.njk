@@ -1,0 +1,21 @@
+<div class="speciality">
+
+    <div class="banner">
+        <div class="banner__img">
+            <img src={{ banners.details.speciality.img_url }} alt="">
+        </div>
+        <div class="banner__content">
+            <h1 class="banner__title">
+                {{ banners.details.speciality.title }}
+            </h1>
+            <ul class="banner__list">
+                {% for service in banners.details.speciality.speciality_list %}
+                        <li>
+                            {{ service }}
+                        </li> 
+               {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</div>

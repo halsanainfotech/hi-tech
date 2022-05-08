@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+.speciality {
+
+    .banner {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            max-height: 220px;
+            width: 100%;
+            
+            li {
+                margin-top: 0.1em;
+            }
+        }
+    }
+
+
+    @include breakpoint("small") {
+        .banner{
+            grid-auto-flow: dense;
+            &__img{
+                grid-column: 2;
+            }
+            &__content {
+                grid-column: 1;
+                margin: 0;
+                margin-left: 3em;
+            }
+            &__list {
+                max-height: 260px;
+                width: 100%;
+                align-content: space-around;
+            }
+        }
+    }
+}

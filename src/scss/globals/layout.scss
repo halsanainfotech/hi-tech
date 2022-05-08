@@ -1,0 +1,43 @@
+@use '../util' as *;
+
+.container {
+	padding: 0 rem(24);
+	max-width: rem(1110);
+	margin: 0 auto;
+
+	@include breakpoint(large) {
+		padding: 0;
+		transform: translate(0, 0);
+	}
+}
+
+
+body {
+	overflow-x: hidden;
+}
+
+.transition-fade {
+	opacity: 1;
+	transition: 200ms;
+	transform: translateX(0);
+	transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+	opacity: 1;
+	transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+	opacity: 0;
+	transform: translateX(0);
+}
+
+.transition-swipe {
+	transition: 500ms;
+	transform: translateY(0);
+}
+
+html.is-animating .transition-swipe {
+	transform: translateY(100px);
+}

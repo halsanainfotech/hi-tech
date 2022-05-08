@@ -1,0 +1,19 @@
+{
+    "services": [
+        {"title": "Digital Marketing",
+         "img_url": "/assets/hi_img/digital_marketing.png"
+        },
+
+        {"title": "UX/UI",
+         "img_url": "/assets/hi_img/ux.png"
+        },
+
+        {"title": "Web Development",
+         "img_url": "/assets/hi_img/web_dev.png"
+        },
+
+        {"title": "Mobile App Development",
+         "img_url": "/assets/hi_img/mob-dev.png"
+        }
+    ]
+}

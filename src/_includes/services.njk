@@ -1,0 +1,20 @@
+<div class="services">
+    <div class="services__title">
+        <h1>Our Service</h1>
+        <img src="/assets/hi_img/service_1.png" alt="">
+    </div>
+    <div class="services__cards">
+
+        {% for service in news.services %}
+     
+         <a href="/about" class="services__card">
+            <img src={{ service.img_url }} alt="">
+            <h1>
+                {{ service.title }}
+            </h1> 
+        </a>
+
+        {% endfor %}
+     </div>
+</div>
+

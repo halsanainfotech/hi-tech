@@ -1,0 +1,48 @@
+.studios,
+.speciality {
+    &__title {
+        width: auto;
+        line-height: 1.2;
+        width: 81%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin-bottom: 0.5em;
+        color: #006A74;
+    }
+
+    p {
+        font-weight: 400;
+        margin-bottom: 2em;
+        font-size: clamp(0.6rem, calc(5vw + 1rem), 1.2rem);
+        letter-spacing: -0.5px;
+    }
+
+    .banner {
+        // color: white
+
+        &__title {
+            font-size: 1.8rem;
+            text-align: center;
+            // background: red;
+            color: #1EC3C4;
+            width: 100%;
+        }
+        &__list {
+            text-align: left;
+
+            li {
+                background: url("/assets/hi_img/b.png") no-repeat left center;
+                padding: 5px 10px 5px 25px;
+                margin: 0;
+                vertical-align: middle;
+                font-weight: 500;
+                color: #2B3C6C;
+                word-spacing: -1px;
+                font-size: clamp(0.6rem, calc(2vw + 0.5rem), 1.3rem);
+            }
+        }
+    }
+
+}

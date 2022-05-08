@@ -1,0 +1,27 @@
+<div class="studios">
+    <div class="studios__title">
+        <h1>Our Studios</h1>
+        <P class="dis">
+            Halsana Infotech helps you strengthen your IT foundation and realize new possibilities that enable accelerated growth. we use our collective creativity to make a positive impact on business.
+        </P>
+    </div>
+
+    <div class="banner">
+        <div class="banner__img">
+            <img src={{ banners.details.studios.img_url }} alt="">
+        </div>
+        <div class="banner__content">
+            <h1 class="banner__title">
+                {{ banners.details.studios.title }}
+            </h1>
+            <ul class="banner__list">
+                {% for service in banners.details.studios.strategy_list %}
+                        <li>
+                            {{ service }}
+                        </li> 
+               {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</div>

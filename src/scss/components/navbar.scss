@@ -1,0 +1,229 @@
+@use '../util' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+html {
+
+    box-sizing: border-box ;
+    --duration: .45s ;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1) ;
+    --color-1: #d5dadd ;
+    --color-2: #51d5c2 ;
+
+}
+
+header {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif ;
+
+    .logo{
+        margin: 1.5em;
+        padding: 0.4em;
+        background: white;
+        box-shadow: 3px 3px 8px rgba(98, 95, 103, 0.5);
+        border-radius: 10px;
+
+        img {
+            width: 50px;
+            object-fit: contain;
+            @include breakpoint("small"){
+                width: 60px;
+            }
+        }
+    }
+
+
+    @include breakpoint("small") {
+        align-items: stretch;
+        padding: 1em 0;
+
+        .logo {
+            margin: 1em;
+        }
+    }
+
+}
+
+.nav {
+
+    &__logo {
+        display: grid;
+        place-content: center;
+        padding: 1.2em 0.5em 0;
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: white;
+    box-shadow: none;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 180ms ease-in;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5em 0.5em;
+        gap: 1em;
+        
+        .nav__link {
+            // background: blue;
+            padding: 0.6em;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2em;
+            color: var(--color-1)
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 0.5rem;
+        }
+    }
+
+
+    @include breakpoint("small"){
+        position: static;
+        height: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background: white;
+        box-shadow: 3px 3px 8px rgba(98, 95, 103, 0.5);
+        border-radius: 0 0 0 4em;
+        font-size: clamp(0.8rem, calc(5vw + 1rem), 1.5rem);
+        color: var(--color-1);
+        transition: 0s;
+
+        transform: translateX(0);
+
+        &__logo {
+            display: none;
+        }
+        
+        &__list {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 95%;
+            padding: 0;
+            gap: 0;
+
+            .nav__link {
+                background: transparent;
+                padding: 0;
+                border-radius: 0;
+            }
+
+    
+            img {
+                display: none;
+            }
+        }
+
+    }
+
+}
+
+
+.open {
+    // display: block;
+    transform: translateX(0);
+    box-shadow: 3px 3px 8px rgba(98, 95, 103, 0.5);
+}
+
+
+.active {
+    color: var(--color-2);
+}
+
+
+
+.menu__bar {
+    // display: none;
+    position: fixed;
+    top: 1.5em;
+    right: 1.5em;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    background: white;
+    cursor: pointer;
+
+    box-shadow: 3px 3px 8px rgba(98, 95, 103, 0.5);
+    border-radius: 10px;
+
+    width: max-content; 
+    padding: 1.2em 0.85em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    transition: padding 150ms ease-in;
+
+
+    span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        position: relative;
+        background-color: black;
+        border-radius: 6px;
+        z-index: 1;
+    
+        transform-origin: 0 0;
+        transform: translateX(0);
+        transition: 0.2s;
+    }
+
+    @include breakpoint("small") {
+        display: none;
+    }
+}
+
+.menu__bar.is-active {
+    padding: 1.2em 0.48em 1.2em 1.1em;
+}
+
+.menu__bar:hover .m {
+    transform: translateX(10px);
+    background-color: blue;
+}
+
+.menu__bar.is-active span:nth-child(1) {
+    transform: translate(1px, -4px) rotate(45deg);
+    /* background: red; */
+}
+.menu__bar.is-active span:nth-child(3) {
+    transform: translate(-1px, 3px) rotate(-45deg);
+}
+.menu__bar.is-active .m {
+    opacity: 0;
+    transform: translateX(15px);
+}
