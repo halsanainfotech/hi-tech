@@ -9,13 +9,11 @@ $(document).ready(function(){
 });
 
 $(".logo").click(function(){
-    window.scrollTo(0, 0)
     $(".nav__link").removeClass("active");
     $(".nav_home").addClass("active");
 }) 
 
 $(".nav__logo").click(function(){
-    window.scrollTo(0, 0)
     $(".nav__link").removeClass("active");
     $(".nav_home").addClass("active");
 }) 

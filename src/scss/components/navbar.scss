@@ -163,6 +163,7 @@ header {
     @include breakpoint("small") {
         color: var(--color-2);
         background: transparent;
+        transform: scale(1.06)
     }
 
 }
