@@ -1,13 +1,5 @@
 const swup = new Swup()
 
-$(document).ready(function(){
-    $(".menu__bar").click(function(){
-     $(".nav").toggleClass("open");
-     $(".menu__bar").toggleClass("is-active");
-    //  $(".nav").fadeToggle();
-    });
-});
-
 $(".logo").click(function(){
     $(".nav__link").removeClass("active");
     $(".nav_home").addClass("active");
@@ -29,4 +21,25 @@ $(".nav__link").click(function(){
 })
 
 
+$(document).ready(function(){
+    $(".menu__bar").click(function(){
+        $(".nav").toggleClass("open");
+        $(".menu__bar").toggleClass("is-active");
+        $(".menu__close").toggleClass("menu__open")
+    });
+});
 
+
+$(document).ready(function(){
+    $(".menu__close").click(function(){
+        $(".menu__close").removeClass("menu__open")
+        $(".nav").removeClass("open");
+        $(".menu__bar").removeClass("is-active");
+    }); 
+});
+
+$(".menu__close").tap(function(){
+    $(".menu__close").removeClass("menu__open")
+    $(".nav").removeClass("open");
+    $(".menu__bar").removeClass("is-active");
+}); 

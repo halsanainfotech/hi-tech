@@ -48,6 +48,12 @@ header {
 
 }
 
+.fcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav {
 
     &__logo {
@@ -83,10 +89,7 @@ header {
         .nav__link {
             padding: 0.6em;
             border-radius: 20px;
-            display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             gap: 0.2em;
             color: var(--color-1)
         }
@@ -171,7 +174,6 @@ header {
 
 
 .menu__bar {
-    // display: none;
     position: fixed;
     top: 1.5em;
     right: 1.5em;
@@ -186,11 +188,7 @@ header {
 
     width: max-content; 
     padding: 1.2em 0.85em;
-
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
 
     transition: padding 150ms ease-in;
@@ -234,4 +232,22 @@ header {
 .menu__bar.is-active .m {
     opacity: 0;
     transform: translateX(15px);
+}
+
+
+.menu__close {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: black;
+    opacity: 0.2;
+
+}
+
+.menu__open {
+    display: block;
 }
